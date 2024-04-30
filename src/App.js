@@ -4,7 +4,7 @@ import './App.css';
 
 import Home from './components/Home'
 import NavBar from './components/NavBar'
-import FoodItem from './components/FoodItem'
+import FoodItem from './components/FoodContainer'
 
 function App() {
   return (
