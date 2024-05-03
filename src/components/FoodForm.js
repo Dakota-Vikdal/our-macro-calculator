@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import './FoodItem.css'
+import { Card, CardBody } from 'react-bootstrap';
 
 function FoodForm({ onAddFood }) {
 
@@ -22,36 +24,42 @@ function FoodForm({ onAddFood }) {
 
         onAddFood(newFood)
 
-        setFoodName('');
-        setCarbs('');
-        setFats('');
-        setProteins('');
+        // setFoodName('');
+        // setCarbs('');
+        // setFats('');
+        // setProteins('');
     }
 
-
-
     return(
-        <div>
-            <h2>Add New Food</h2>
-            <form onSubmit={handleSubmit}>
-                <label>
-                Food Name:
-                <input type="text" value={foodName} onChange={(e) => setFoodName(e.target.value)} required />
-                </label>
-                <label>
-                Carbs (g):
-                <input type="number" value={carbs} onChange={(e) => setCarbs(e.target.value)} required />
-                </label>
-                <label>
-                Fats (g):
-                <input type="number" value={fats} onChange={(e) => setFats(e.target.value)} required />
-                </label>
-                <label>
-                Proteins (g):
-                <input type="number" value={proteins} onChange={(e) => setProteins(e.target.value)} required />
-                </label>
-                <button type="submit">Add Food</button>
-            </form>
+        <div style={{ marginTop: '50px'}}>
+            <Card>
+                <CardBody>
+                    <div>
+                        <h2 className='mb-4'>Add New Food</h2>
+                        <form onSubmit={handleSubmit}>
+                            <div className='mb-3'>
+                                <label>
+                                <strong>Food Name:</strong>
+                                <input type="text" value={foodName} onChange={(e) => setFoodName(e.target.value)}  style={{ marginLeft: "10px", marginRight:"10px" }} required />
+                                </label>
+                                <label className= 'px-5'>
+                                <strong>Carbs (g):</strong>
+                                <input type="number" value={carbs} onChange={(e) => setCarbs(e.target.value)} style={{ marginLeft: "10px", marginRight:"10px" }} required />
+                                </label>
+                                <label>
+                                <strong>Fats (g):</strong>
+                                <input type="number" value={fats} onChange={(e) => setFats(e.target.value)} style={{ marginLeft: "10px", marginRight:"10px" }} required />
+                                </label>
+                                <label>
+                                Proteins (g):
+                                <input type="number" value={proteins} onChange={(e) => setProteins(e.target.value)} style={{ marginLeft: "10px", marginRight:"10px" }} required />
+                                </label>
+                            </div>
+                            <button type="submit" className='btn btn-primary'>Add Food</button>
+                        </form>
+                    </div>
+                </CardBody>
+            </Card>
         </div>
     )
 }

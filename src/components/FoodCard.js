@@ -3,11 +3,13 @@ import FoodItem from './FoodItem'
 function FoodCard({food}) {
 
     const foodItem = food.map(foodObj => (
-        <FoodItem {...foodObj}/>
+        <div className='col-10 m-3'>
+            <FoodItem {...foodObj}/>
+        </div>
     ))
 
     return(
-            <div>
+            <div className='row'>
                 {foodItem}
             </div>
     )

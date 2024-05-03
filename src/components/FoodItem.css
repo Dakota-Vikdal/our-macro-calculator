@@ -1,0 +1,10 @@
+.card-body {
+    display: flex;
+    justify-content: space-between; /* Space evenly between children */
+  }
+  
+  @media (min-width: 768px) {
+    .flex-md-row {
+      flex-direction: row !important; /* Override flex-direction for medium screens */
+    }
+  }

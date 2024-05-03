@@ -1,6 +1,7 @@
 import FoodForm from './FoodForm'
 import FoodCard from './FoodCard'
 import { useState } from 'react'
+import { Card, CardBody } from 'react-bootstrap';
 
 function FoodContainer() {
 
@@ -15,10 +16,16 @@ function FoodContainer() {
     
 
     return(
-        <div className="container">
-            <FoodForm onAddFood={handleAddFood}/>
-            <h2 className="mt-5">Tracked Foods</h2>
-            <FoodCard food={food}/>
+        <div className='py-3 px-5'>
+            <Card style={{ backgroundColor: '#e3f2fd' }}>
+                <div className="container">
+                    <FoodForm onAddFood={handleAddFood}/>
+                    <div className="mt-5 mb-4">
+                        <h2>All Foods</h2>
+                    </div>
+                    <FoodCard food={food}/>
+                </div>
+            </Card>
         </div>
     )
 }
