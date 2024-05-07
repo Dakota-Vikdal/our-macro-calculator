@@ -1,7 +1,7 @@
 import FoodForm from './FoodForm'
 import FoodCard from './FoodCard'
 import { useState } from 'react'
-import { Card, CardBody } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 function FoodContainer() {
 
