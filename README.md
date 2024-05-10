@@ -8,4 +8,7 @@ This website is designed to aid users, like yourself, in tracking their macros, 
 
 Once the macros have been input, the calories will be automatically calculated for you.
 
+
+Does this add up folks?
+
 Is this working?
